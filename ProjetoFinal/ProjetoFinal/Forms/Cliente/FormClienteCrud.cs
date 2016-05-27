@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ProjetoFinal.Forms.Cliente
 {
-    public partial class FormClienteCrud : Form
+    public partial class FormClienteCrud : MetroForm
     {
         public FormClienteCrud()
         {
@@ -40,6 +41,11 @@ namespace ProjetoFinal.Forms.Cliente
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

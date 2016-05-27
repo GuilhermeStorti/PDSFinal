@@ -10,10 +10,11 @@ using System.Windows.Forms;
 using ProjetoFinal.Models;
 using ProjetoFinal.Forms;
 using ProjetoFinal.Forms.Cliente;
+using MetroFramework.Forms;
 
 namespace ProjetoFinal.Forms
 {
-    public partial class FormPrincipal : Form
+    public partial class FormPrincipal : MetroForm
     {
         Usuario usuario = new Usuario();
 

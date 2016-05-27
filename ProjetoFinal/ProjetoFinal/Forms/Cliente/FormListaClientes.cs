@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoFinal.Forms.Cliente;
+using MetroFramework.Forms;
 
 namespace ProjetoFinal.Forms
 {
-    public partial class FormListaClientes : Form
+    public partial class FormListaClientes : MetroForm
     {
 
         FormClienteCrud formClienteCrud;

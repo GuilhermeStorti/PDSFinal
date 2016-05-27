@@ -10,10 +10,11 @@ using System.Windows.Forms;
 using ProjetoFinal.Models;
 using ProjetoFinal.Forms;
 using ProjetoFinal.Services;
+using MetroFramework.Forms;
 
 namespace ProjetoFinal
 {
-    public partial class FormLogin : Form
+    public partial class FormLogin : MetroForm
     {
         Usuario usuario = null;
 
@@ -55,6 +56,11 @@ namespace ProjetoFinal
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

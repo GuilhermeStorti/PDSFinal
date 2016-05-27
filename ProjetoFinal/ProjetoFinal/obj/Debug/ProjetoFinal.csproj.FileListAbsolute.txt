@@ -14,3 +14,15 @@ C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\ProjetoFinal\Proje
 C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\bin\Debug\ProjetoFinal.exe.config
 C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.exe
 C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.pdb
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\bin\Debug\ProjetoFinal.exe
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\bin\Debug\ProjetoFinal.pdb
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\bin\Debug\MetroFramework.Design.dll
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\bin\Debug\MetroFramework.dll
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.csprojResolveAssemblyReference.cache
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Cliente.FormClienteCrud.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.FormLogin.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.FormListaClientes.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.FormPrincipal.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Properties.Resources.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.csproj.GenerateResource.Cache
