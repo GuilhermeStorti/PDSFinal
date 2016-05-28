@@ -9,17 +9,17 @@ namespace ProjetoFinal.Models
     public class Produto
     {
 
-        public long idProduto { get; set; }
+        public Int64 idProduto { get; set; }
 
         public String descricao { get; set; }
 
         public float valor { get; set; }
 
-        public long idTipoProduto { get; set; }
+        public Int64 idTipoProduto { get; set; }
 
         public String estoque { get; set; }
 
-        public long idFabricante { get; set; }
+        public Int64 idFabricante { get; set; }
 
     }
 }

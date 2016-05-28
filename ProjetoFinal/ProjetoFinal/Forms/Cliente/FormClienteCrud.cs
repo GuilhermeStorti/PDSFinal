@@ -18,6 +18,11 @@ namespace ProjetoFinal.Forms.Cliente
             InitializeComponent();
         }
 
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtBairro.Text = "";
@@ -33,19 +38,9 @@ namespace ProjetoFinal.Forms.Cliente
             txtTelefone.Text = "";
         }
 
-        private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

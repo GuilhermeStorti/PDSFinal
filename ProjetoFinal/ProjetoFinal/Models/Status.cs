@@ -9,7 +9,7 @@ namespace ProjetoFinal.Models
     public class Status
     {
 
-        public long idStatus { get; set; }
+        public Int64 idStatus { get; set; }
 
         public String descricao { get; set; }
 

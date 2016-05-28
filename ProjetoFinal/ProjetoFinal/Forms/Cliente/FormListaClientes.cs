@@ -42,5 +42,10 @@ namespace ProjetoFinal.Forms
             formClienteCrud.ShowDialog();
             this.Show();
         }
+
+        private void metroUserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

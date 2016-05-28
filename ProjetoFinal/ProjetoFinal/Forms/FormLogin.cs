@@ -25,42 +25,31 @@ namespace ProjetoFinal
             InitializeComponent();
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            usuario = UsuarioDAO.validaUsuario(txtUsuario.Text, txtSenha.Text);
+            if (usuario != null)
+            {
+                formPrincipal = new FormPrincipal(usuario);
+                this.Hide();
+                formPrincipal.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Login ou senha incorretos.");
+            }
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
         {
             txtUsuario.Text = "";
             txtSenha.Text = "";
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-            //usuario = UsuarioDAO.validaUsuario(txtUsuario.Text, txtSenha.Text);
-            //if (usuario != null)
-            //{
-                formPrincipal = new FormPrincipal(usuario);
-                this.Hide();
-                formPrincipal.ShowDialog();
-                this.Show();
-            //}
-                //else 
-            //{
-            //    MessageBox.Show("Login ou senha incorretos.");
-            // }
-
-        }
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        private void metroButton3_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -8,7 +8,7 @@ namespace ProjetoFinal.Models
 {
     public class Cliente
     {
-        public long idCliente { get; set; }
+        public Int64 idCliente { get; set; }
 
         public String nome { get; set; }
 
@@ -18,7 +18,7 @@ namespace ProjetoFinal.Models
 
         public String cpf { get; set; }
 
-        public long idEndereco { get; set; }
+        public Int64 idEndereco { get; set; }
 
     }
 }

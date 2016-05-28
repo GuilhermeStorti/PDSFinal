@@ -8,7 +8,7 @@ namespace ProjetoFinal.Models
 {
     public class Fabricante
     {
-        public long idFabricante { get; set; }
+        public Int64 idFabricante { get; set; }
 
         public String nome { get; set; }
 

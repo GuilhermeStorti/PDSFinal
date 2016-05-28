@@ -9,7 +9,7 @@ namespace ProjetoFinal.Models
     public class FormaPagamento
     {
 
-        public long idFormaPagamento { get; set; }
+        public Int64 idFormaPagamento { get; set; }
 
         public String descricao { get; set; }
 

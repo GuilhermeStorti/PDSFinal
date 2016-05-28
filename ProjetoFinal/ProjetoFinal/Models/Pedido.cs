@@ -9,19 +9,19 @@ namespace ProjetoFinal.Models
     public class Pedido
     {
 
-        public long idPedido { get; set; }
+        public Int64 idPedido { get; set; }
 
         public DateTime dataVenda { get; set; }
 
         public float valor { get; set; }
 
-        public long idStatus { get; set; }
+        public Int64 idStatus { get; set; }
 
-        public long idCliente { get; set; }
+        public Int64 idCliente { get; set; }
 
-        public long idUsuario { get; set; }
+        public Int64 idUsuario { get; set; }
 
-        public long idFormaPagamento { get; set; }
+        public Int64 idFormaPagamento { get; set; }
 
         public DateTime dataPagamento { get; set; }
 

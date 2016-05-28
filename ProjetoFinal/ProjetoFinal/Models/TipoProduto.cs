@@ -8,7 +8,7 @@ namespace ProjetoFinal.Models
 {
     public class TipoProduto
     {
-        public long idTipoProduto { get; set; }
+        public Int64 idTipoProduto { get; set; }
 
         public String descricao { get; set; }
 

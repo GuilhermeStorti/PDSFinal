@@ -8,7 +8,7 @@ namespace ProjetoFinal.Models
 {
     public class Endereco
     {
-        public long idEndereco { get; set; }
+        public Int64 idEndereco { get; set; }
 
         public String logradouro { get; set; }
 

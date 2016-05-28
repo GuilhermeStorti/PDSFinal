@@ -7,6 +7,7 @@ using ProjetoFinal.Services;
 using MySql.Data.MySqlClient;
 using ProjetoFinal.Models;
 using System.Data;
+using ProjetoFinal.Utils;
 
 namespace ProjetoFinal.Services
 {
@@ -24,20 +25,20 @@ namespace ProjetoFinal.Services
                 query.Parameters.AddWithValue("@login", login);
                 query.Parameters.AddWithValue("@senha", senha);
 
-                Int32 resposta = query.ExecuteNonQuery();
+                MySqlDataReader reader = query.ExecuteReader();
 
-                if (resposta > 0)
+                if (reader.Read())
                 {
                     query.CommandText = "SELECT * FROM usuario u WHERE u.login = '@login' AND u.senha = '@senha'";
-                    MySqlDataReader reader = query.ExecuteReader();
-                    usuario.idUsuario = (long)reader["id_usuario"];
-                    usuario.nome = (String)reader["nome"];
-                    usuario.login = (String)reader["login"];
-                    usuario.senha = (String)reader["senha"];
-                    usuario.telefone = (String)reader["telefone"];
-                    usuario.email = (String)reader["email"];
-                    usuario.cpf = (String)reader["cpf"];
-                    usuario.idEndereco = (long)reader["id_endereco"];
+                    //MySqlDataReader reader = query.ExecuteReader();
+                    usuario.idUsuario = reader["id_usuario"] == DBNull.Value ? 0 : (Int64) reader["id_usuario"];
+                    usuario.nome = reader["nome"] == DBNull.Value ? null : reader["nome"].ToString();
+                    usuario.login = reader["login"] == DBNull.Value ? null : reader["login"].ToString();
+                    usuario.senha = reader["senha"] == DBNull.Value ? null : reader["senha"].ToString();
+                    usuario.telefone = reader["telefone"] == DBNull.Value ? null : reader["telefone"].ToString();
+                    usuario.email = reader["email"] == DBNull.Value ? null : reader["email"].ToString();
+                    usuario.cpf = reader["cpf"] == DBNull.Value ? null : reader["cpf"].ToString();
+                    usuario.idEndereco = reader["id_endereco"] == DBNull.Value ? 0 : (Int64)reader["id_endereco"];
                     return usuario;
                 }
                 else
