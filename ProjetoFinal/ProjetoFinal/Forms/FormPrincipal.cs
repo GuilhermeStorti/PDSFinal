@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using ProjetoFinal.Models;
 using ProjetoFinal.Forms;
 using ProjetoFinal.Forms.Cliente;
+using ProjetoFinal.Forms.Produto;
+using ProjetoFinal.Forms.Fabricante;
+using ProjetoFinal.Forms.Tipo;
+using ProjetoFinal.Forms.Pedido;
 using MetroFramework.Forms;
 
 namespace ProjetoFinal.Forms
@@ -19,7 +23,10 @@ namespace ProjetoFinal.Forms
         Usuario usuario = new Usuario();
 
         FormListaClientes formListaClientes;
-        FormClienteCrud formClienteCrud;
+        FormListaProdutos formListaProdutos;
+        FormListaFabricante formListaFabricante;
+        FormListaTipos formListaTipos;
+        FormListaPedidos formListaPedidos;
 
         public FormPrincipal()
         {
@@ -42,7 +49,12 @@ namespace ProjetoFinal.Forms
             this.Close();
         }
 
-        private void listarClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
         {
             formListaClientes = new FormListaClientes();
             this.Hide();
@@ -50,11 +62,35 @@ namespace ProjetoFinal.Forms
             this.Show();
         }
 
-        private void adicionarEditarRemoverToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnProdutos_Click(object sender, EventArgs e)
         {
-            formClienteCrud = new FormClienteCrud();
+            formListaProdutos = new FormListaProdutos();
             this.Hide();
-            formClienteCrud.ShowDialog();
+            formListaProdutos.ShowDialog();
+            this.Show();
+        }
+
+        private void btnFabricantes_Click(object sender, EventArgs e)
+        {
+            formListaFabricante = new FormListaFabricante();
+            this.Hide();
+            formListaFabricante.ShowDialog();
+            this.Show();
+        }
+
+        private void btnTipos_Click(object sender, EventArgs e)
+        {
+            formListaTipos = new FormListaTipos();
+            this.Hide();
+            formListaTipos.ShowDialog();
+            this.Show();
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            formListaPedidos = new FormListaPedidos();
+            this.Hide();
+            formListaPedidos.ShowDialog();
             this.Show();
         }
     }

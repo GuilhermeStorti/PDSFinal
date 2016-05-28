@@ -9,33 +9,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProjetoFinal.Forms.Cliente
+namespace ProjetoFinal.Forms.Fabricante
 {
-    public partial class FormClienteCrud : MetroForm
+    public partial class FormFabricanteCrud : MetroForm
     {
-        public FormClienteCrud()
+        public FormFabricanteCrud()
         {
             InitializeComponent();
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void FormFabricanteCrud_Load(object sender, EventArgs e)
         {
 
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtBairro.Text = "";
-            txtMaskCEP.Text = "";
-            txtCidade.Text = "";
-            txtComplemento.Text = "";
-            txtMaskCPF.Text = "";
-            txtEmail.Text = "";
-            txtEstado.Text = "";
-            txtLogradouro.Text = "";
+            txtDescricao.Text = "";
             txtNome.Text = "";
-            txtNumero.Text = "";
-            txtMaskTelefone.Text = "";
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

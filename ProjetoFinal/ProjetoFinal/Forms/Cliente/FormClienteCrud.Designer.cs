@@ -29,15 +29,12 @@
         private void InitializeComponent()
         {
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
-            this.txtTelefone = new MetroFramework.Controls.MetroTextBox();
-            this.txtCPF = new MetroFramework.Controls.MetroTextBox();
             this.txtLogradouro = new MetroFramework.Controls.MetroTextBox();
             this.txtCidade = new MetroFramework.Controls.MetroTextBox();
             this.txtNumero = new MetroFramework.Controls.MetroTextBox();
             this.txtBairro = new MetroFramework.Controls.MetroTextBox();
             this.txtEstado = new MetroFramework.Controls.MetroTextBox();
             this.txtComplemento = new MetroFramework.Controls.MetroTextBox();
-            this.txtCEP = new MetroFramework.Controls.MetroTextBox();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -53,6 +50,9 @@
             this.btnSalvar = new MetroFramework.Controls.MetroButton();
             this.btnLimpar = new MetroFramework.Controls.MetroButton();
             this.btnVoltar = new MetroFramework.Controls.MetroButton();
+            this.txtMaskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtMaskCEP = new System.Windows.Forms.MaskedTextBox();
+            this.txtMaskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // txtNome
@@ -71,7 +71,7 @@
             this.txtNome.CustomButton.Visible = false;
             this.txtNome.Lines = new string[0];
             this.txtNome.Location = new System.Drawing.Point(81, 140);
-            this.txtNome.MaxLength = 32767;
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
             this.txtNome.PasswordChar = '\0';
             this.txtNome.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -83,64 +83,6 @@
             this.txtNome.UseSelectable = true;
             this.txtNome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtNome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtTelefone
-            // 
-            // 
-            // 
-            // 
-            this.txtTelefone.CustomButton.Image = null;
-            this.txtTelefone.CustomButton.Location = new System.Drawing.Point(178, 1);
-            this.txtTelefone.CustomButton.Name = "";
-            this.txtTelefone.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtTelefone.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtTelefone.CustomButton.TabIndex = 1;
-            this.txtTelefone.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtTelefone.CustomButton.UseSelectable = true;
-            this.txtTelefone.CustomButton.Visible = false;
-            this.txtTelefone.Lines = new string[0];
-            this.txtTelefone.Location = new System.Drawing.Point(81, 185);
-            this.txtTelefone.MaxLength = 32767;
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.PasswordChar = '\0';
-            this.txtTelefone.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtTelefone.SelectedText = "";
-            this.txtTelefone.SelectionLength = 0;
-            this.txtTelefone.SelectionStart = 0;
-            this.txtTelefone.Size = new System.Drawing.Size(200, 23);
-            this.txtTelefone.TabIndex = 1;
-            this.txtTelefone.UseSelectable = true;
-            this.txtTelefone.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtTelefone.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtCPF
-            // 
-            // 
-            // 
-            // 
-            this.txtCPF.CustomButton.Image = null;
-            this.txtCPF.CustomButton.Location = new System.Drawing.Point(178, 1);
-            this.txtCPF.CustomButton.Name = "";
-            this.txtCPF.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtCPF.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtCPF.CustomButton.TabIndex = 1;
-            this.txtCPF.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtCPF.CustomButton.UseSelectable = true;
-            this.txtCPF.CustomButton.Visible = false;
-            this.txtCPF.Lines = new string[0];
-            this.txtCPF.Location = new System.Drawing.Point(81, 275);
-            this.txtCPF.MaxLength = 32767;
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.PasswordChar = '\0';
-            this.txtCPF.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtCPF.SelectedText = "";
-            this.txtCPF.SelectionLength = 0;
-            this.txtCPF.SelectionStart = 0;
-            this.txtCPF.Size = new System.Drawing.Size(200, 23);
-            this.txtCPF.TabIndex = 3;
-            this.txtCPF.UseSelectable = true;
-            this.txtCPF.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtCPF.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtLogradouro
             // 
@@ -158,7 +100,7 @@
             this.txtLogradouro.CustomButton.Visible = false;
             this.txtLogradouro.Lines = new string[0];
             this.txtLogradouro.Location = new System.Drawing.Point(81, 319);
-            this.txtLogradouro.MaxLength = 32767;
+            this.txtLogradouro.MaxLength = 50;
             this.txtLogradouro.Name = "txtLogradouro";
             this.txtLogradouro.PasswordChar = '\0';
             this.txtLogradouro.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -187,7 +129,7 @@
             this.txtCidade.CustomButton.Visible = false;
             this.txtCidade.Lines = new string[0];
             this.txtCidade.Location = new System.Drawing.Point(316, 185);
-            this.txtCidade.MaxLength = 32767;
+            this.txtCidade.MaxLength = 50;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.PasswordChar = '\0';
             this.txtCidade.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -195,7 +137,7 @@
             this.txtCidade.SelectionLength = 0;
             this.txtCidade.SelectionStart = 0;
             this.txtCidade.Size = new System.Drawing.Size(200, 23);
-            this.txtCidade.TabIndex = 6;
+            this.txtCidade.TabIndex = 7;
             this.txtCidade.UseSelectable = true;
             this.txtCidade.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCidade.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -216,7 +158,7 @@
             this.txtNumero.CustomButton.Visible = false;
             this.txtNumero.Lines = new string[0];
             this.txtNumero.Location = new System.Drawing.Point(81, 364);
-            this.txtNumero.MaxLength = 32767;
+            this.txtNumero.MaxLength = 5;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.PasswordChar = '\0';
             this.txtNumero.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -245,7 +187,7 @@
             this.txtBairro.CustomButton.Visible = false;
             this.txtBairro.Lines = new string[0];
             this.txtBairro.Location = new System.Drawing.Point(316, 140);
-            this.txtBairro.MaxLength = 32767;
+            this.txtBairro.MaxLength = 30;
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.PasswordChar = '\0';
             this.txtBairro.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -253,7 +195,7 @@
             this.txtBairro.SelectionLength = 0;
             this.txtBairro.SelectionStart = 0;
             this.txtBairro.Size = new System.Drawing.Size(200, 23);
-            this.txtBairro.TabIndex = 5;
+            this.txtBairro.TabIndex = 6;
             this.txtBairro.UseSelectable = true;
             this.txtBairro.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBairro.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -274,7 +216,7 @@
             this.txtEstado.CustomButton.Visible = false;
             this.txtEstado.Lines = new string[0];
             this.txtEstado.Location = new System.Drawing.Point(316, 230);
-            this.txtEstado.MaxLength = 32767;
+            this.txtEstado.MaxLength = 50;
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.PasswordChar = '\0';
             this.txtEstado.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -282,7 +224,7 @@
             this.txtEstado.SelectionLength = 0;
             this.txtEstado.SelectionStart = 0;
             this.txtEstado.Size = new System.Drawing.Size(200, 23);
-            this.txtEstado.TabIndex = 7;
+            this.txtEstado.TabIndex = 8;
             this.txtEstado.UseSelectable = true;
             this.txtEstado.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtEstado.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -303,7 +245,7 @@
             this.txtComplemento.CustomButton.Visible = false;
             this.txtComplemento.Lines = new string[0];
             this.txtComplemento.Location = new System.Drawing.Point(316, 275);
-            this.txtComplemento.MaxLength = 32767;
+            this.txtComplemento.MaxLength = 50;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.PasswordChar = '\0';
             this.txtComplemento.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -311,39 +253,10 @@
             this.txtComplemento.SelectionLength = 0;
             this.txtComplemento.SelectionStart = 0;
             this.txtComplemento.Size = new System.Drawing.Size(200, 23);
-            this.txtComplemento.TabIndex = 8;
+            this.txtComplemento.TabIndex = 9;
             this.txtComplemento.UseSelectable = true;
             this.txtComplemento.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtComplemento.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtCEP
-            // 
-            // 
-            // 
-            // 
-            this.txtCEP.CustomButton.Image = null;
-            this.txtCEP.CustomButton.Location = new System.Drawing.Point(178, 1);
-            this.txtCEP.CustomButton.Name = "";
-            this.txtCEP.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtCEP.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtCEP.CustomButton.TabIndex = 1;
-            this.txtCEP.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtCEP.CustomButton.UseSelectable = true;
-            this.txtCEP.CustomButton.Visible = false;
-            this.txtCEP.Lines = new string[0];
-            this.txtCEP.Location = new System.Drawing.Point(316, 319);
-            this.txtCEP.MaxLength = 32767;
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.PasswordChar = '\0';
-            this.txtCEP.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtCEP.SelectedText = "";
-            this.txtCEP.SelectionLength = 0;
-            this.txtCEP.SelectionStart = 0;
-            this.txtCEP.Size = new System.Drawing.Size(200, 23);
-            this.txtCEP.TabIndex = 9;
-            this.txtCEP.UseSelectable = true;
-            this.txtCEP.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtCEP.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtEmail
             // 
@@ -361,7 +274,7 @@
             this.txtEmail.CustomButton.Visible = false;
             this.txtEmail.Lines = new string[0];
             this.txtEmail.Location = new System.Drawing.Point(81, 230);
-            this.txtEmail.MaxLength = 32767;
+            this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -478,7 +391,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(573, 185);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(152, 32);
-            this.btnSalvar.TabIndex = 10;
+            this.btnSalvar.TabIndex = 11;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseSelectable = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -488,7 +401,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(573, 230);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(152, 32);
-            this.btnLimpar.TabIndex = 11;
+            this.btnLimpar.TabIndex = 12;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseSelectable = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -498,16 +411,58 @@
             this.btnVoltar.Location = new System.Drawing.Point(573, 275);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(152, 32);
-            this.btnVoltar.TabIndex = 12;
+            this.btnVoltar.TabIndex = 13;
             this.btnVoltar.Text = "VOLTAR";
             this.btnVoltar.UseSelectable = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // txtMaskCPF
+            // 
+            this.txtMaskCPF.BackColor = System.Drawing.Color.White;
+            this.txtMaskCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaskCPF.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtMaskCPF.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaskCPF.Location = new System.Drawing.Point(81, 275);
+            this.txtMaskCPF.Mask = "000,000,000-00";
+            this.txtMaskCPF.Name = "txtMaskCPF";
+            this.txtMaskCPF.Size = new System.Drawing.Size(200, 23);
+            this.txtMaskCPF.TabIndex = 21;
+            this.txtMaskCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtMaskCEP
+            // 
+            this.txtMaskCEP.BackColor = System.Drawing.Color.White;
+            this.txtMaskCEP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaskCEP.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtMaskCEP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaskCEP.Location = new System.Drawing.Point(316, 319);
+            this.txtMaskCEP.Mask = "00,000-000";
+            this.txtMaskCEP.Name = "txtMaskCEP";
+            this.txtMaskCEP.Size = new System.Drawing.Size(200, 23);
+            this.txtMaskCEP.TabIndex = 22;
+            this.txtMaskCEP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtMaskTelefone
+            // 
+            this.txtMaskTelefone.BackColor = System.Drawing.Color.White;
+            this.txtMaskTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaskTelefone.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtMaskTelefone.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaskTelefone.Location = new System.Drawing.Point(81, 185);
+            this.txtMaskTelefone.Mask = "(00)90000-0000";
+            this.txtMaskTelefone.Name = "txtMaskTelefone";
+            this.txtMaskTelefone.Size = new System.Drawing.Size(200, 23);
+            this.txtMaskTelefone.TabIndex = 23;
+            this.txtMaskTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FormClienteCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.txtMaskTelefone);
+            this.Controls.Add(this.txtMaskCEP);
+            this.Controls.Add(this.txtMaskCPF);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSalvar);
@@ -522,21 +477,18 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.txtLogradouro);
-            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtNome);
             this.MaximumSize = new System.Drawing.Size(800, 500);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "FormClienteCrud";
-            this.Text = "MinhasVendas-Cliente";
+            this.Text = "MinhasVendas-Cadastro de Cliente";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,15 +497,12 @@
         #endregion
 
         private MetroFramework.Controls.MetroTextBox txtNome;
-        private MetroFramework.Controls.MetroTextBox txtTelefone;
-        private MetroFramework.Controls.MetroTextBox txtCPF;
         private MetroFramework.Controls.MetroTextBox txtLogradouro;
         private MetroFramework.Controls.MetroTextBox txtCidade;
         private MetroFramework.Controls.MetroTextBox txtNumero;
         private MetroFramework.Controls.MetroTextBox txtBairro;
         private MetroFramework.Controls.MetroTextBox txtEstado;
         private MetroFramework.Controls.MetroTextBox txtComplemento;
-        private MetroFramework.Controls.MetroTextBox txtCEP;
         private MetroFramework.Controls.MetroTextBox txtEmail;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
@@ -569,6 +518,9 @@
         private MetroFramework.Controls.MetroButton btnSalvar;
         private MetroFramework.Controls.MetroButton btnLimpar;
         private MetroFramework.Controls.MetroButton btnVoltar;
+        private System.Windows.Forms.MaskedTextBox txtMaskCPF;
+        private System.Windows.Forms.MaskedTextBox txtMaskCEP;
+        private System.Windows.Forms.MaskedTextBox txtMaskTelefone;
 
     }
 }

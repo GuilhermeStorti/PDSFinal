@@ -65,6 +65,18 @@
     <Compile Include="Forms\Cliente\FormClienteCrud.Designer.cs">
       <DependentUpon>FormClienteCrud.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Fabricante\FormFabricanteCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fabricante\FormFabricanteCrud.Designer.cs">
+      <DependentUpon>FormFabricanteCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fabricante\FormListaFabricante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fabricante\FormListaFabricante.Designer.cs">
+      <DependentUpon>FormListaFabricante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +94,42 @@
     </Compile>
     <Compile Include="Forms\FormPrincipal.Designer.cs">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pedido\FormListaPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pedido\FormListaPedidos.Designer.cs">
+      <DependentUpon>FormListaPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Pedido\FormPedidoCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Pedido\FormPedidoCrud.Designer.cs">
+      <DependentUpon>FormPedidoCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Produto\FormListaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Produto\FormListaProdutos.Designer.cs">
+      <DependentUpon>FormListaProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Produto\FormProdutoCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Produto\FormProdutoCrud.Designer.cs">
+      <DependentUpon>FormProdutoCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tipo\FormListaTipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tipo\FormListaTipos.Designer.cs">
+      <DependentUpon>FormListaTipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tipo\FormTipoCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tipo\FormTipoCrud.Designer.cs">
+      <DependentUpon>FormTipoCrud.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
@@ -101,6 +149,12 @@
     <EmbeddedResource Include="Forms\Cliente\FormClienteCrud.resx">
       <DependentUpon>FormClienteCrud.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fabricante\FormFabricanteCrud.resx">
+      <DependentUpon>FormFabricanteCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fabricante\FormListaFabricante.resx">
+      <DependentUpon>FormListaFabricante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +163,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pedido\FormListaPedidos.resx">
+      <DependentUpon>FormListaPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Pedido\FormPedidoCrud.resx">
+      <DependentUpon>FormPedidoCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Produto\FormListaProdutos.resx">
+      <DependentUpon>FormListaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Produto\FormProdutoCrud.resx">
+      <DependentUpon>FormProdutoCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tipo\FormListaTipos.resx">
+      <DependentUpon>FormListaTipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tipo\FormTipoCrud.resx">
+      <DependentUpon>FormTipoCrud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +193,10 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjetoFinal.Models.Cliente.datasource" />
+    <None Include="Properties\DataSources\ProjetoFinal.Models.Fabricante.datasource" />
+    <None Include="Properties\DataSources\ProjetoFinal.Models.Pedido.datasource" />
+    <None Include="Properties\DataSources\ProjetoFinal.Models.Produto.datasource" />
+    <None Include="Properties\DataSources\ProjetoFinal.Models.TipoProduto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -138,6 +214,7 @@
     <Content Include="logo100.ico" />
     <Content Include="logo150.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -43,9 +43,30 @@ namespace ProjetoFinal.Forms
             this.Show();
         }
 
-        private void metroUserControl1_Load(object sender, EventArgs e)
+        private void btnAdicionar_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            formClienteCrud = new FormClienteCrud();
+            formClienteCrud.ShowDialog();
+            this.Show();
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            formClienteCrud = new FormClienteCrud();
+            formClienteCrud.ShowDialog();
+            this.Show();
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

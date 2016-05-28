@@ -26,3 +26,11 @@ C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\P
 C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.FormPrincipal.resources
 C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Properties.Resources.resources
 C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.csproj.GenerateResource.Cache
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Produto.FormListaProdutos.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Produto.FormProdutoCrud.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Fabricante.FormFabricanteCrud.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Fabricante.FormListaFabricante.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Tipo.FormListaTipos.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Tipo.FormTipoCrud.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Pedido.FormListaPedidos.resources
+C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Pedido.FormPedidoCrud.resources

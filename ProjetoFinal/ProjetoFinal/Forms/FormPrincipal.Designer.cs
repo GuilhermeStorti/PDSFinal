@@ -28,157 +28,154 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ferramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarEditarRemoverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fabricantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarTodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarEditarRemoverToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pedidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarTodosToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarEditarRemoverToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnPedidos = new MetroFramework.Controls.MetroButton();
+            this.btnProdutos = new MetroFramework.Controls.MetroButton();
+            this.btnFabricantes = new MetroFramework.Controls.MetroButton();
+            this.btnTipos = new MetroFramework.Controls.MetroButton();
+            this.btnClientes = new MetroFramework.Controls.MetroButton();
+            this.btnSair = new MetroFramework.Controls.MetroButton();
+            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // btnPedidos
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.arquivoToolStripMenuItem,
-            this.ferramentasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(20, 60);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(760, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.btnPedidos.Location = new System.Drawing.Point(27, 74);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Size = new System.Drawing.Size(105, 30);
+            this.btnPedidos.TabIndex = 1;
+            this.btnPedidos.Text = "PEDIDOS";
+            this.btnPedidos.UseSelectable = true;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
-            // arquivoToolStripMenuItem
+            // btnProdutos
             // 
-            this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem});
-            this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.arquivoToolStripMenuItem.Text = "Arquivo";
+            this.btnProdutos.Location = new System.Drawing.Point(156, 74);
+            this.btnProdutos.Name = "btnProdutos";
+            this.btnProdutos.Size = new System.Drawing.Size(105, 30);
+            this.btnProdutos.TabIndex = 2;
+            this.btnProdutos.Text = "PRODUTOS";
+            this.btnProdutos.UseSelectable = true;
+            this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
-            // sairToolStripMenuItem
+            // btnFabricantes
             // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
-            this.sairToolStripMenuItem.Text = "Sair";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            this.btnFabricantes.Location = new System.Drawing.Point(288, 74);
+            this.btnFabricantes.Name = "btnFabricantes";
+            this.btnFabricantes.Size = new System.Drawing.Size(105, 30);
+            this.btnFabricantes.TabIndex = 3;
+            this.btnFabricantes.Text = "FABRICANTES";
+            this.btnFabricantes.UseSelectable = true;
+            this.btnFabricantes.Click += new System.EventHandler(this.btnFabricantes_Click);
             // 
-            // ferramentasToolStripMenuItem
+            // btnTipos
             // 
-            this.ferramentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clienteToolStripMenuItem,
-            this.fabricantesToolStripMenuItem,
-            this.pedidosToolStripMenuItem});
-            this.ferramentasToolStripMenuItem.Name = "ferramentasToolStripMenuItem";
-            this.ferramentasToolStripMenuItem.Size = new System.Drawing.Size(84, 20);
-            this.ferramentasToolStripMenuItem.Text = "Ferramentas";
+            this.btnTipos.Location = new System.Drawing.Point(415, 74);
+            this.btnTipos.Name = "btnTipos";
+            this.btnTipos.Size = new System.Drawing.Size(105, 30);
+            this.btnTipos.TabIndex = 4;
+            this.btnTipos.Text = "TIPOS";
+            this.btnTipos.UseSelectable = true;
+            this.btnTipos.Click += new System.EventHandler(this.btnTipos_Click);
             // 
-            // clienteToolStripMenuItem
+            // btnClientes
             // 
-            this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listarClientesToolStripMenuItem,
-            this.adicionarEditarRemoverToolStripMenuItem});
-            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.clienteToolStripMenuItem.Text = "Clientes";
+            this.btnClientes.Location = new System.Drawing.Point(546, 74);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(105, 30);
+            this.btnClientes.TabIndex = 5;
+            this.btnClientes.Text = "CLIENTES";
+            this.btnClientes.UseSelectable = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // listarClientesToolStripMenuItem
+            // btnSair
             // 
-            this.listarClientesToolStripMenuItem.Name = "listarClientesToolStripMenuItem";
-            this.listarClientesToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.listarClientesToolStripMenuItem.Text = "Listar Todos";
-            this.listarClientesToolStripMenuItem.Click += new System.EventHandler(this.listarClientesToolStripMenuItem_Click);
+            this.btnSair.Location = new System.Drawing.Point(669, 74);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(105, 30);
+            this.btnSair.TabIndex = 6;
+            this.btnSair.Text = "SAIR";
+            this.btnSair.UseSelectable = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // adicionarEditarRemoverToolStripMenuItem
+            // metroGrid1
             // 
-            this.adicionarEditarRemoverToolStripMenuItem.Name = "adicionarEditarRemoverToolStripMenuItem";
-            this.adicionarEditarRemoverToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.adicionarEditarRemoverToolStripMenuItem.Text = "Adicionar/Editar/Remover";
-            this.adicionarEditarRemoverToolStripMenuItem.Click += new System.EventHandler(this.adicionarEditarRemoverToolStripMenuItem_Click);
-            // 
-            // fabricantesToolStripMenuItem
-            // 
-            this.fabricantesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listarTodosToolStripMenuItem,
-            this.adicionarEditarRemoverToolStripMenuItem2});
-            this.fabricantesToolStripMenuItem.Name = "fabricantesToolStripMenuItem";
-            this.fabricantesToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.fabricantesToolStripMenuItem.Text = "Fabricantes";
-            // 
-            // listarTodosToolStripMenuItem
-            // 
-            this.listarTodosToolStripMenuItem.Name = "listarTodosToolStripMenuItem";
-            this.listarTodosToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.listarTodosToolStripMenuItem.Text = "Listar Todos";
-            // 
-            // adicionarEditarRemoverToolStripMenuItem2
-            // 
-            this.adicionarEditarRemoverToolStripMenuItem2.Name = "adicionarEditarRemoverToolStripMenuItem2";
-            this.adicionarEditarRemoverToolStripMenuItem2.Size = new System.Drawing.Size(212, 22);
-            this.adicionarEditarRemoverToolStripMenuItem2.Text = "Adicionar/Editar/Remover";
-            // 
-            // pedidosToolStripMenuItem
-            // 
-            this.pedidosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.listarTodosToolStripMenuItem3,
-            this.adicionarEditarRemoverToolStripMenuItem1});
-            this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.pedidosToolStripMenuItem.Text = "Pedidos";
-            // 
-            // listarTodosToolStripMenuItem3
-            // 
-            this.listarTodosToolStripMenuItem3.Name = "listarTodosToolStripMenuItem3";
-            this.listarTodosToolStripMenuItem3.Size = new System.Drawing.Size(212, 22);
-            this.listarTodosToolStripMenuItem3.Text = "Listar Todos";
-            // 
-            // adicionarEditarRemoverToolStripMenuItem1
-            // 
-            this.adicionarEditarRemoverToolStripMenuItem1.Name = "adicionarEditarRemoverToolStripMenuItem1";
-            this.adicionarEditarRemoverToolStripMenuItem1.Size = new System.Drawing.Size(212, 22);
-            this.adicionarEditarRemoverToolStripMenuItem1.Text = "Adicionar/Editar/Remover";
+            this.metroGrid1.AllowUserToResizeRows = false;
+            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.metroGrid1.EnableHeadersVisualStyles = false;
+            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.Location = new System.Drawing.Point(28, 132);
+            this.metroGrid1.Name = "metroGrid1";
+            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.metroGrid1.Size = new System.Drawing.Size(750, 314);
+            this.metroGrid1.TabIndex = 7;
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.metroGrid1);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnClientes);
+            this.Controls.Add(this.btnTipos);
+            this.Controls.Add(this.btnFabricantes);
+            this.Controls.Add(this.btnProdutos);
+            this.Controls.Add(this.btnPedidos);
             this.MaximumSize = new System.Drawing.Size(800, 500);
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "FormPrincipal";
-            this.Text = "MinhasVendas ";
+            this.Text = "MinhasVendas - Tela Principal";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem arquivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ferramentasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listarClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adicionarEditarRemoverToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fabricantesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listarTodosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adicionarEditarRemoverToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem pedidosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listarTodosToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem adicionarEditarRemoverToolStripMenuItem1;
+        private MetroFramework.Controls.MetroButton btnPedidos;
+        private MetroFramework.Controls.MetroButton btnProdutos;
+        private MetroFramework.Controls.MetroButton btnFabricantes;
+        private MetroFramework.Controls.MetroButton btnTipos;
+        private MetroFramework.Controls.MetroButton btnClientes;
+        private MetroFramework.Controls.MetroButton btnSair;
+        private MetroFramework.Controls.MetroGrid metroGrid1;
+
 
     }
 }
