@@ -34,3 +34,30 @@ C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\P
 C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Tipo.FormTipoCrud.resources
 C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Pedido.FormListaPedidos.resources
 C:\Users\Guilherme\OneDrive\5PERIODO\PDS Malopes\ProjetoFinal\PDS\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Pedido.FormPedidoCrud.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\ProjetoFinal.exe.config
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.exe
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.pdb
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\ProjetoFinal.exe
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\ProjetoFinal.pdb
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\EntityFramework.dll
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\MetroFramework.Design.dll
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\MetroFramework.dll
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\EntityFramework.xml
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.csprojResolveAssemblyReference.cache
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Cliente.FormClienteCrud.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Fabricante.FormFabricanteCrud.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Fabricante.FormListaFabricante.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.FormLogin.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.FormListaClientes.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.FormPrincipal.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Pedido.FormListaPedidos.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Pedido.FormPedidoCrud.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Produto.FormListaProdutos.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Produto.FormProdutoCrud.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Tipo.FormListaTipos.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Tipo.FormTipoCrud.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Properties.Resources.resources
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.csproj.GenerateResource.Cache

@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="banco_pdsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CLIENTE">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="50" />
+    <Property Name="telefone" Type="varchar" MaxLength="11" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="cpf" Type="varchar" MaxLength="13" />
+    <Property Name="id_endereco" Type="bigint" />
+  </EntityType>
+  <EntityType Name="ENDERECO">
+    <Key>
+      <PropertyRef Name="id_endereco" />
+    </Key>
+    <Property Name="id_endereco" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="logradouro" Type="varchar" MaxLength="50" />
+    <Property Name="numero" Type="int" />
+    <Property Name="bairro" Type="varchar" MaxLength="30" />
+    <Property Name="cidade" Type="varchar" MaxLength="50" />
+    <Property Name="estado" Type="varchar" MaxLength="50" />
+    <Property Name="complemento" Type="varchar" MaxLength="50" />
+    <Property Name="cep" Type="varchar" MaxLength="8" />
+  </EntityType>
+  <EntityType Name="FABRICANTE">
+    <Key>
+      <PropertyRef Name="id_fabricante" />
+    </Key>
+    <Property Name="id_fabricante" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="50" />
+    <Property Name="descricao" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FORMA_PAGAMENTO">
+    <Key>
+      <PropertyRef Name="id_forma_pagamento" />
+    </Key>
+    <Property Name="id_forma_pagamento" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PEDIDO">
+    <Key>
+      <PropertyRef Name="id_pedido" />
+    </Key>
+    <Property Name="id_pedido" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="data_venda" Type="datetime" />
+    <Property Name="valor" Type="float" />
+    <Property Name="id_status" Type="bigint" />
+    <Property Name="id_cliente" Type="bigint" />
+    <Property Name="id_usuario" Type="bigint" />
+    <Property Name="id_forma_pagamento" Type="bigint" />
+    <Property Name="data_pagamento" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PRODUTO">
+    <Key>
+      <PropertyRef Name="id_produto" />
+    </Key>
+    <Property Name="id_produto" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="50" />
+    <Property Name="valor" Type="float" />
+    <Property Name="id_tipo_produto" Type="bigint" />
+    <Property Name="estoque" Type="varchar" MaxLength="50" />
+    <Property Name="id_fabricante" Type="bigint" />
+  </EntityType>
+  <EntityType Name="PRODUTO_PEDIDO">
+    <Key>
+      <PropertyRef Name="id_produto" />
+      <PropertyRef Name="id_pedido" />
+    </Key>
+    <Property Name="id_produto" Type="bigint" Nullable="false" />
+    <Property Name="id_pedido" Type="bigint" Nullable="false" />
+    <Property Name="quantidade" Type="char" MaxLength="18" />
+    <Property Name="valor_parcial" Type="char" MaxLength="18" />
+  </EntityType>
+  <EntityType Name="STATUS">
+    <Key>
+      <PropertyRef Name="id_status" />
+    </Key>
+    <Property Name="id_status" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TIPO_PRODUTO">
+    <Key>
+      <PropertyRef Name="id_tipo_produto" />
+    </Key>
+    <Property Name="id_tipo_produto" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descricao" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="id_usuario" />
+    </Key>
+    <Property Name="id_usuario" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="varchar" MaxLength="50" />
+    <Property Name="login" Type="varchar" MaxLength="15" />
+    <Property Name="senha" Type="varchar" MaxLength="15" />
+    <Property Name="telefone" Type="varchar" MaxLength="11" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="cpf" Type="varchar" MaxLength="13" />
+    <Property Name="id_endereco" Type="bigint" />
+  </EntityType>
+  <Association Name="R_10">
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="0..1" />
+    <End Role="PEDIDO" Type="Self.PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTE">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="PEDIDO">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_11">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="PEDIDO" Type="Self.PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="PEDIDO">
+        <PropertyRef Name="id_usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_12">
+    <End Role="FORMA_PAGAMENTO" Type="Self.FORMA_PAGAMENTO" Multiplicity="0..1" />
+    <End Role="PEDIDO" Type="Self.PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FORMA_PAGAMENTO">
+        <PropertyRef Name="id_forma_pagamento" />
+      </Principal>
+      <Dependent Role="PEDIDO">
+        <PropertyRef Name="id_forma_pagamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_13">
+    <End Role="ENDERECO" Type="Self.ENDERECO" Multiplicity="0..1" />
+    <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENDERECO">
+        <PropertyRef Name="id_endereco" />
+      </Principal>
+      <Dependent Role="CLIENTE">
+        <PropertyRef Name="id_endereco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_14">
+    <End Role="ENDERECO" Type="Self.ENDERECO" Multiplicity="0..1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ENDERECO">
+        <PropertyRef Name="id_endereco" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="id_endereco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_15">
+    <End Role="PEDIDO" Type="Self.PEDIDO" Multiplicity="1" />
+    <End Role="PRODUTO_PEDIDO" Type="Self.PRODUTO_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PEDIDO">
+        <PropertyRef Name="id_pedido" />
+      </Principal>
+      <Dependent Role="PRODUTO_PEDIDO">
+        <PropertyRef Name="id_pedido" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_16">
+    <End Role="TIPO_PRODUTO" Type="Self.TIPO_PRODUTO" Multiplicity="0..1" />
+    <End Role="PRODUTO" Type="Self.PRODUTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_PRODUTO">
+        <PropertyRef Name="id_tipo_produto" />
+      </Principal>
+      <Dependent Role="PRODUTO">
+        <PropertyRef Name="id_tipo_produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_17">
+    <End Role="FABRICANTE" Type="Self.FABRICANTE" Multiplicity="0..1" />
+    <End Role="PRODUTO" Type="Self.PRODUTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FABRICANTE">
+        <PropertyRef Name="id_fabricante" />
+      </Principal>
+      <Dependent Role="PRODUTO">
+        <PropertyRef Name="id_fabricante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_5">
+    <End Role="STATUS" Type="Self.STATUS" Multiplicity="0..1" />
+    <End Role="PEDIDO" Type="Self.PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STATUS">
+        <PropertyRef Name="id_status" />
+      </Principal>
+      <Dependent Role="PEDIDO">
+        <PropertyRef Name="id_status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_8">
+    <End Role="PRODUTO" Type="Self.PRODUTO" Multiplicity="1" />
+    <End Role="PRODUTO_PEDIDO" Type="Self.PRODUTO_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUTO">
+        <PropertyRef Name="id_produto" />
+      </Principal>
+      <Dependent Role="PRODUTO_PEDIDO">
+        <PropertyRef Name="id_produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="banco_pdsModelStoreContainer">
+    <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ENDERECO" EntityType="Self.ENDERECO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FABRICANTE" EntityType="Self.FABRICANTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FORMA_PAGAMENTO" EntityType="Self.FORMA_PAGAMENTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PEDIDO" EntityType="Self.PEDIDO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUTO" EntityType="Self.PRODUTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUTO_PEDIDO" EntityType="Self.PRODUTO_PEDIDO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STATUS" EntityType="Self.STATUS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_PRODUTO" EntityType="Self.TIPO_PRODUTO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="R_10" Association="Self.R_10">
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+      <End Role="PEDIDO" EntitySet="PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="R_11" Association="Self.R_11">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PEDIDO" EntitySet="PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="R_12" Association="Self.R_12">
+      <End Role="FORMA_PAGAMENTO" EntitySet="FORMA_PAGAMENTO" />
+      <End Role="PEDIDO" EntitySet="PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="R_13" Association="Self.R_13">
+      <End Role="ENDERECO" EntitySet="ENDERECO" />
+      <End Role="CLIENTE" EntitySet="CLIENTE" />
+    </AssociationSet>
+    <AssociationSet Name="R_14" Association="Self.R_14">
+      <End Role="ENDERECO" EntitySet="ENDERECO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="R_15" Association="Self.R_15">
+      <End Role="PEDIDO" EntitySet="PEDIDO" />
+      <End Role="PRODUTO_PEDIDO" EntitySet="PRODUTO_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="R_16" Association="Self.R_16">
+      <End Role="TIPO_PRODUTO" EntitySet="TIPO_PRODUTO" />
+      <End Role="PRODUTO" EntitySet="PRODUTO" />
+    </AssociationSet>
+    <AssociationSet Name="R_17" Association="Self.R_17">
+      <End Role="FABRICANTE" EntitySet="FABRICANTE" />
+      <End Role="PRODUTO" EntitySet="PRODUTO" />
+    </AssociationSet>
+    <AssociationSet Name="R_5" Association="Self.R_5">
+      <End Role="STATUS" EntitySet="STATUS" />
+      <End Role="PEDIDO" EntitySet="PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="R_8" Association="Self.R_8">
+      <End Role="PRODUTO" EntitySet="PRODUTO" />
+      <End Role="PRODUTO_PEDIDO" EntitySet="PRODUTO_PEDIDO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

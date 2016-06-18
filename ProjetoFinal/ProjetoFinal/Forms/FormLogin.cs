@@ -11,6 +11,7 @@ using ProjetoFinal.Models;
 using ProjetoFinal.Forms;
 using ProjetoFinal.Services;
 using MetroFramework.Forms;
+using ProjetoFinal.BancoPds;
 
 namespace ProjetoFinal
 {
@@ -27,17 +28,19 @@ namespace ProjetoFinal
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            usuario = UsuarioDAO.validaUsuario(txtUsuario.Text, txtSenha.Text);
-            if (usuario != null)
+            ContextBancoPds ctx = new ContextBancoPds();
+
+            var query = ctx.USUARIO.Where(p => p.login == txtUsuario.Text && p.senha == txtSenha.Text).ToList();
+            if (query.Count == 0)
             {
-                formPrincipal = new FormPrincipal(usuario);
-                this.Hide();
-                formPrincipal.ShowDialog();
-                this.Show();
+                MessageBox.Show("Login ou senha incorretos.");
             }
             else
             {
-                MessageBox.Show("Login ou senha incorretos.");
+                formPrincipal = new FormPrincipal();
+                this.Hide();
+                formPrincipal.ShowDialog();
+                this.Show();
             }
         }
 

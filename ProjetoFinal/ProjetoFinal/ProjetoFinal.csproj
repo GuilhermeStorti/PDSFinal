@@ -35,6 +35,14 @@
     <ApplicationIcon>logo150.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.dll</HintPath>
     </Reference>
@@ -48,7 +56,10 @@
       <HintPath>..\..\..\..\..\..\..\..\xampp\mysql-connector-net-6.9.8-noinstall\v4.0\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +70,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BancoPds\BancoPds.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BancoPds.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\BancoPds.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BancoPds.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\BancoPds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BancoPds.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\CLIENTE.cs">
+      <DependentUpon>BancoPds.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\ENDERECO.cs">
+      <DependentUpon>BancoPds.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\FABRICANTE.cs">
+      <DependentUpon>BancoPds.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\FORMA_PAGAMENTO.cs">
+      <DependentUpon>BancoPds.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\PEDIDO.cs">
+      <DependentUpon>BancoPds.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\PRODUTO.cs">
+      <DependentUpon>BancoPds.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\PRODUTO_PEDIDO.cs">
+      <DependentUpon>BancoPds.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\STATUS.cs">
+      <DependentUpon>BancoPds.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\TIPO_PRODUTO.cs">
+      <DependentUpon>BancoPds.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BancoPds\USUARIO.cs">
+      <DependentUpon>BancoPds.tt</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Cliente\FormClienteCrud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +247,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="BancoPds\BancoPds.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BancoPds.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BancoPds\BancoPds.edmx.diagram">
+      <DependentUpon>BancoPds.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjetoFinal.Models.Cliente.datasource" />
     <None Include="Properties\DataSources\ProjetoFinal.Models.Fabricante.datasource" />
@@ -211,10 +274,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BancoPds\BancoPds.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BancoPds.edmx</DependentUpon>
+      <LastGenOutput>BancoPds.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BancoPds\BancoPds.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BancoPds.edmx</DependentUpon>
+      <LastGenOutput>BancoPds.cs</LastGenOutput>
+    </Content>
     <Content Include="logo100.ico" />
     <Content Include="logo150.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
