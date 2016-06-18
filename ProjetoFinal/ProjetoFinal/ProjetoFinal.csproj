@@ -115,6 +115,11 @@
     <Compile Include="BancoPds\USUARIO.cs">
       <DependentUpon>BancoPds.tt</DependentUpon>
     </Compile>
+    <Compile Include="banco_pdsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_pdsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Cliente\FormClienteCrud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +258,17 @@
     </EntityDeploy>
     <None Include="BancoPds\BancoPds.edmx.diagram">
       <DependentUpon>BancoPds.edmx</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet.xsc">
+      <DependentUpon>banco_pdsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_pdsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_pdsDataSet.xss">
+      <DependentUpon>banco_pdsDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjetoFinal.Models.Cliente.datasource" />

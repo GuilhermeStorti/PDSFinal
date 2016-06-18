@@ -41,5 +41,12 @@ namespace ProjetoFinal.Forms.Tipo
             formTipoCrud.ShowDialog();
             this.Show();
         }
+
+        private void FormListaTipos_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'banco_pdsDataSet.TIPO_PRODUTO' table. You can move, or remove it, as needed.
+            this.tIPO_PRODUTOTableAdapter.Fill(this.banco_pdsDataSet.TIPO_PRODUTO);
+
+        }
     }
 }
