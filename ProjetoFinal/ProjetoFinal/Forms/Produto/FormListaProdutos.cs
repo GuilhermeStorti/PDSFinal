@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoFinal.Forms.Produto;
+using ProjetoFinal.BancoPds;
 
 namespace ProjetoFinal.Forms.Produto
 {
@@ -16,13 +17,25 @@ namespace ProjetoFinal.Forms.Produto
     {
         FormProdutoCrud formProdutoCrud;
 
+        ContextBancoPds ctx;
+
         public FormListaProdutos()
         {
             InitializeComponent();
+            atualizarBinding();
+        }
+
+        private void atualizarBinding()
+        {
+            pRODUTOBindingSource1.ResetBindings(false);
+            ctx = new ContextBancoPds();
+            pRODUTOBindingSource1.DataSource = ctx.PRODUTO.ToList();
         }
 
         private void FormListaProdutos_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'banco_pdsDataSet4.PRODUTO' table. You can move, or remove it, as needed.
+            this.pRODUTOTableAdapter.Fill(this.banco_pdsDataSet4.PRODUTO);
 
         }
 
@@ -31,6 +44,7 @@ namespace ProjetoFinal.Forms.Produto
             formProdutoCrud = new FormProdutoCrud();
             this.Hide();
             formProdutoCrud.ShowDialog();
+            atualizarBinding();
             this.Show();
         }
 
@@ -44,6 +58,7 @@ namespace ProjetoFinal.Forms.Produto
             formProdutoCrud = new FormProdutoCrud();
             this.Hide();
             formProdutoCrud.ShowDialog();
+            atualizarBinding();
             this.Show();
         }
     }

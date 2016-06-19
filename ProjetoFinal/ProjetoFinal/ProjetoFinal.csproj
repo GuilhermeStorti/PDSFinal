@@ -120,6 +120,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>banco_pdsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="banco_pdsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_pdsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="banco_pdsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_pdsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="banco_pdsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_pdsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="banco_pdsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_pdsDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Cliente\FormClienteCrud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +289,50 @@
     </None>
     <None Include="banco_pdsDataSet.xss">
       <DependentUpon>banco_pdsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet1.xsc">
+      <DependentUpon>banco_pdsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_pdsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_pdsDataSet1.xss">
+      <DependentUpon>banco_pdsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet2.xsc">
+      <DependentUpon>banco_pdsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_pdsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_pdsDataSet2.xss">
+      <DependentUpon>banco_pdsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet3.xsc">
+      <DependentUpon>banco_pdsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_pdsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_pdsDataSet3.xss">
+      <DependentUpon>banco_pdsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet4.xsc">
+      <DependentUpon>banco_pdsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_pdsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_pdsDataSet4.xss">
+      <DependentUpon>banco_pdsDataSet4.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjetoFinal.Models.Cliente.datasource" />

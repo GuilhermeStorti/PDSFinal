@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoFinal.BancoPds;
 
 namespace ProjetoFinal.Forms.Fabricante
 {
     public partial class FormFabricanteCrud : MetroForm
     {
+        ContextBancoPds ctx;
+        FABRICANTE fabricante;
         public FormFabricanteCrud()
         {
             InitializeComponent();
@@ -32,6 +35,26 @@ namespace ProjetoFinal.Forms.Fabricante
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            fabricante = new FABRICANTE();
+            fabricante.descricao = txtDescricao.Text;
+            fabricante.nome = txtNome.Text;
+            ctx = new ContextBancoPds();
+            ctx.FABRICANTE.Add(fabricante);
+            ctx.SaveChanges();
+            DialogResult dialogResult = MessageBox.Show("Fabricante adicionado com sucesso! Deseja voltar a lista?", "Sucesso", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                txtNome.Text = "";
+                txtDescricao.Text = "";
+            }
         }
     }
 }

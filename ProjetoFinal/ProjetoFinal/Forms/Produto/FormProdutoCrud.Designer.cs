@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnVoltar = new MetroFramework.Controls.MetroButton();
             this.btnLimpar = new MetroFramework.Controls.MetroButton();
             this.btnSalvar = new MetroFramework.Controls.MetroButton();
@@ -40,7 +41,17 @@
             this.txtQuantidade = new MetroFramework.Controls.MetroTextBox();
             this.comboTipo = new MetroFramework.Controls.MetroComboBox();
             this.comboFabricante = new MetroFramework.Controls.MetroComboBox();
-            this.txtMaskValor = new System.Windows.Forms.MaskedTextBox();
+            this.banco_pdsDataSet2 = new ProjetoFinal.banco_pdsDataSet2();
+            this.fABRICANTEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fABRICANTETableAdapter = new ProjetoFinal.banco_pdsDataSet2TableAdapters.FABRICANTETableAdapter();
+            this.banco_pdsDataSet3 = new ProjetoFinal.banco_pdsDataSet3();
+            this.tIPOPRODUTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tIPO_PRODUTOTableAdapter = new ProjetoFinal.banco_pdsDataSet3TableAdapters.TIPO_PRODUTOTableAdapter();
+            this.txtValor = new MetroFramework.Controls.MetroTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.banco_pdsDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fABRICANTEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.banco_pdsDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tIPOPRODUTOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVoltar
@@ -71,13 +82,14 @@
             this.btnSalvar.TabIndex = 33;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseSelectable = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.Location = new System.Drawing.Point(200, 321);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(70, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(69, 19);
             this.metroLabel5.TabIndex = 39;
             this.metroLabel5.Text = "Fabricante";
             // 
@@ -104,7 +116,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(200, 164);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(40, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(38, 19);
             this.metroLabel2.TabIndex = 34;
             this.metroLabel2.Text = "Valor";
             // 
@@ -177,6 +189,9 @@
             // 
             // comboTipo
             // 
+            this.comboTipo.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tIPOPRODUTOBindingSource, "id_tipo_produto", true));
+            this.comboTipo.DataSource = this.tIPOPRODUTOBindingSource;
+            this.comboTipo.DisplayMember = "descricao";
             this.comboTipo.FormattingEnabled = true;
             this.comboTipo.ItemHeight = 23;
             this.comboTipo.Location = new System.Drawing.Point(200, 240);
@@ -184,9 +199,13 @@
             this.comboTipo.Size = new System.Drawing.Size(200, 29);
             this.comboTipo.TabIndex = 51;
             this.comboTipo.UseSelectable = true;
+            this.comboTipo.ValueMember = "id_tipo_produto";
             // 
             // comboFabricante
             // 
+            this.comboFabricante.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.fABRICANTEBindingSource, "id_fabricante", true));
+            this.comboFabricante.DataSource = this.fABRICANTEBindingSource;
+            this.comboFabricante.DisplayMember = "nome";
             this.comboFabricante.FormattingEnabled = true;
             this.comboFabricante.ItemHeight = 23;
             this.comboFabricante.Location = new System.Drawing.Point(200, 341);
@@ -194,26 +213,71 @@
             this.comboFabricante.Size = new System.Drawing.Size(200, 29);
             this.comboFabricante.TabIndex = 52;
             this.comboFabricante.UseSelectable = true;
+            this.comboFabricante.ValueMember = "id_fabricante";
             // 
-            // txtMaskValor
+            // banco_pdsDataSet2
             // 
-            this.txtMaskValor.BackColor = System.Drawing.Color.White;
-            this.txtMaskValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaskValor.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtMaskValor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaskValor.Location = new System.Drawing.Point(200, 191);
-            this.txtMaskValor.Mask = "9900.00";
-            this.txtMaskValor.Name = "txtMaskValor";
-            this.txtMaskValor.Size = new System.Drawing.Size(200, 23);
-            this.txtMaskValor.TabIndex = 54;
-            this.txtMaskValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.banco_pdsDataSet2.DataSetName = "banco_pdsDataSet2";
+            this.banco_pdsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fABRICANTEBindingSource
+            // 
+            this.fABRICANTEBindingSource.DataMember = "FABRICANTE";
+            this.fABRICANTEBindingSource.DataSource = this.banco_pdsDataSet2;
+            // 
+            // fABRICANTETableAdapter
+            // 
+            this.fABRICANTETableAdapter.ClearBeforeFill = true;
+            // 
+            // banco_pdsDataSet3
+            // 
+            this.banco_pdsDataSet3.DataSetName = "banco_pdsDataSet3";
+            this.banco_pdsDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tIPOPRODUTOBindingSource
+            // 
+            this.tIPOPRODUTOBindingSource.DataMember = "TIPO_PRODUTO";
+            this.tIPOPRODUTOBindingSource.DataSource = this.banco_pdsDataSet3;
+            // 
+            // tIPO_PRODUTOTableAdapter
+            // 
+            this.tIPO_PRODUTOTableAdapter.ClearBeforeFill = true;
+            // 
+            // txtValor
+            // 
+            // 
+            // 
+            // 
+            this.txtValor.CustomButton.Image = null;
+            this.txtValor.CustomButton.Location = new System.Drawing.Point(172, 1);
+            this.txtValor.CustomButton.Name = "";
+            this.txtValor.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.txtValor.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtValor.CustomButton.TabIndex = 1;
+            this.txtValor.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtValor.CustomButton.UseSelectable = true;
+            this.txtValor.CustomButton.Visible = false;
+            this.txtValor.Lines = new string[0];
+            this.txtValor.Location = new System.Drawing.Point(200, 186);
+            this.txtValor.MaxLength = 50;
+            this.txtValor.Name = "txtValor";
+            this.txtValor.PasswordChar = '\0';
+            this.txtValor.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtValor.SelectedText = "";
+            this.txtValor.SelectionLength = 0;
+            this.txtValor.SelectionStart = 0;
+            this.txtValor.Size = new System.Drawing.Size(200, 29);
+            this.txtValor.TabIndex = 55;
+            this.txtValor.UseSelectable = true;
+            this.txtValor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtValor.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // FormProdutoCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.txtMaskValor);
+            this.Controls.Add(this.txtValor);
             this.Controls.Add(this.comboFabricante);
             this.Controls.Add(this.comboTipo);
             this.Controls.Add(this.txtQuantidade);
@@ -231,6 +295,10 @@
             this.Name = "FormProdutoCrud";
             this.Text = "MinhasVendas-Cadastro de Produto";
             this.Load += new System.EventHandler(this.FormProdutoCrud_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.banco_pdsDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fABRICANTEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.banco_pdsDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tIPOPRODUTOBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,6 +318,12 @@
         private MetroFramework.Controls.MetroTextBox txtQuantidade;
         private MetroFramework.Controls.MetroComboBox comboTipo;
         private MetroFramework.Controls.MetroComboBox comboFabricante;
-        private System.Windows.Forms.MaskedTextBox txtMaskValor;
+        private banco_pdsDataSet2 banco_pdsDataSet2;
+        private System.Windows.Forms.BindingSource fABRICANTEBindingSource;
+        private banco_pdsDataSet2TableAdapters.FABRICANTETableAdapter fABRICANTETableAdapter;
+        private banco_pdsDataSet3 banco_pdsDataSet3;
+        private System.Windows.Forms.BindingSource tIPOPRODUTOBindingSource;
+        private banco_pdsDataSet3TableAdapters.TIPO_PRODUTOTableAdapter tIPO_PRODUTOTableAdapter;
+        private MetroFramework.Controls.MetroTextBox txtValor;
     }
 }

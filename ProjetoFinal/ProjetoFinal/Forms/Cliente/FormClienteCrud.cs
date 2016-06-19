@@ -14,6 +14,9 @@ namespace ProjetoFinal.Forms.Cliente
 {
     public partial class FormClienteCrud : MetroForm
     {
+        private ContextBancoPds ctx;
+        private ENDERECO endereco;
+        private CLIENTE cliente;
         public FormClienteCrud()
         {
             InitializeComponent();
@@ -21,26 +24,27 @@ namespace ProjetoFinal.Forms.Cliente
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            ContextBancoPds ctx = new ContextBancoPds();
-            ENDERECO endereco = new ENDERECO();
+            ctx = new ContextBancoPds();
+            endereco = new ENDERECO();
             endereco.logradouro = txtLogradouro.Text;
-            endereco.numero = Convert.ToInt32(txtNumero.Text);
+            endereco.numero = txtNumero.Text == "" ? 0 : Convert.ToInt32(txtNumero.Text);
             endereco.bairro = txtBairro.Text;
             endereco.cidade = txtCidade.Text;
             endereco.estado = txtEstado.Text;
             endereco.complemento = txtComplemento.Text;
-            endereco.cep = txtMaskCEP.Text;
+            endereco.cep = txtCep.Text;
             var query = ctx.ENDERECO.Where(en => en.logradouro == endereco.logradouro && en.numero == endereco.numero).ToList();
             if (query.Count == 0)
             {
                 ctx.ENDERECO.Add(endereco);
                 ctx.SaveChanges();
-                endereco = (ENDERECO)ctx.ENDERECO.Where(en => en.logradouro == endereco.logradouro && en.numero == endereco.numero);
+                var enderecoFinal = ctx.ENDERECO.Where(en => en.logradouro == endereco.logradouro && en.numero == endereco.numero);
             }
             else
             {
+                var enderecoFinal = ctx.ENDERECO.Where(en => en.logradouro == endereco.logradouro && en.numero == endereco.numero);
             }
-            CLIENTE cliente = new CLIENTE();
+            cliente = new CLIENTE();
             cliente.nome = txtNome.Text;
             cliente.telefone = txtMaskTelefone.Text;
             cliente.email = txtEmail.Text;
@@ -54,7 +58,7 @@ namespace ProjetoFinal.Forms.Cliente
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtBairro.Text = "";
-            txtMaskCEP.Text = "";
+            txtCep.Text = "";
             txtCidade.Text = "";
             txtComplemento.Text = "";
             txtMaskCPF.Text = "";

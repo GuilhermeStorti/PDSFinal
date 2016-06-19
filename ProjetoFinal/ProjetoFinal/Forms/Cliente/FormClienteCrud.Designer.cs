@@ -51,8 +51,8 @@
             this.btnLimpar = new MetroFramework.Controls.MetroButton();
             this.btnVoltar = new MetroFramework.Controls.MetroButton();
             this.txtMaskCPF = new System.Windows.Forms.MaskedTextBox();
-            this.txtMaskCEP = new System.Windows.Forms.MaskedTextBox();
             this.txtMaskTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCep = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // txtNome
@@ -301,7 +301,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(81, 164);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(59, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(57, 19);
             this.metroLabel2.TabIndex = 11;
             this.metroLabel2.Text = "Telefone";
             // 
@@ -429,19 +429,6 @@
             this.txtMaskCPF.TabIndex = 21;
             this.txtMaskCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtMaskCEP
-            // 
-            this.txtMaskCEP.BackColor = System.Drawing.Color.White;
-            this.txtMaskCEP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaskCEP.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtMaskCEP.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaskCEP.Location = new System.Drawing.Point(316, 319);
-            this.txtMaskCEP.Mask = "00,000-000";
-            this.txtMaskCEP.Name = "txtMaskCEP";
-            this.txtMaskCEP.Size = new System.Drawing.Size(200, 23);
-            this.txtMaskCEP.TabIndex = 22;
-            this.txtMaskCEP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // txtMaskTelefone
             // 
             this.txtMaskTelefone.BackColor = System.Drawing.Color.White;
@@ -455,13 +442,42 @@
             this.txtMaskTelefone.TabIndex = 23;
             this.txtMaskTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // txtCep
+            // 
+            // 
+            // 
+            // 
+            this.txtCep.CustomButton.Image = null;
+            this.txtCep.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.txtCep.CustomButton.Name = "";
+            this.txtCep.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtCep.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCep.CustomButton.TabIndex = 1;
+            this.txtCep.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCep.CustomButton.UseSelectable = true;
+            this.txtCep.CustomButton.Visible = false;
+            this.txtCep.Lines = new string[0];
+            this.txtCep.Location = new System.Drawing.Point(316, 321);
+            this.txtCep.MaxLength = 8;
+            this.txtCep.Name = "txtCep";
+            this.txtCep.PasswordChar = '\0';
+            this.txtCep.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCep.SelectedText = "";
+            this.txtCep.SelectionLength = 0;
+            this.txtCep.SelectionStart = 0;
+            this.txtCep.Size = new System.Drawing.Size(200, 23);
+            this.txtCep.TabIndex = 24;
+            this.txtCep.UseSelectable = true;
+            this.txtCep.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCep.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // FormClienteCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.txtCep);
             this.Controls.Add(this.txtMaskTelefone);
-            this.Controls.Add(this.txtMaskCEP);
             this.Controls.Add(this.txtMaskCPF);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnLimpar);
@@ -519,8 +535,7 @@
         private MetroFramework.Controls.MetroButton btnLimpar;
         private MetroFramework.Controls.MetroButton btnVoltar;
         private System.Windows.Forms.MaskedTextBox txtMaskCPF;
-        private System.Windows.Forms.MaskedTextBox txtMaskCEP;
         private System.Windows.Forms.MaskedTextBox txtMaskTelefone;
-
+        private MetroFramework.Controls.MetroTextBox txtCep;
     }
 }

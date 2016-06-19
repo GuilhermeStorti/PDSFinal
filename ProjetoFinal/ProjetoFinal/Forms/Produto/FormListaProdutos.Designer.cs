@@ -33,19 +33,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.idProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idTipoProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estoqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idFabricanteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnVoltar = new MetroFramework.Controls.MetroButton();
             this.btnDeletar = new MetroFramework.Controls.MetroButton();
             this.btnEditar = new MetroFramework.Controls.MetroButton();
             this.btnAdicionar = new MetroFramework.Controls.MetroButton();
+            this.banco_pdsDataSet4 = new ProjetoFinal.banco_pdsDataSet4();
+            this.pRODUTOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pRODUTOTableAdapter = new ProjetoFinal.banco_pdsDataSet4TableAdapters.PRODUTOTableAdapter();
+            this.id_produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_tipo_produto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_fabricante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estoqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.banco_pdsDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroGrid1
@@ -66,13 +71,13 @@
             this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idProdutoDataGridViewTextBoxColumn,
+            this.id_produto,
             this.descricaoDataGridViewTextBoxColumn,
+            this.id_tipo_produto,
+            this.id_fabricante,
             this.valorDataGridViewTextBoxColumn,
-            this.idTipoProdutoDataGridViewTextBoxColumn,
-            this.estoqueDataGridViewTextBoxColumn,
-            this.idFabricanteDataGridViewTextBoxColumn});
-            this.metroGrid1.DataSource = this.produtoBindingSource;
+            this.estoqueDataGridViewTextBoxColumn});
+            this.metroGrid1.DataSource = this.pRODUTOBindingSource1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -99,46 +104,6 @@
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(754, 346);
             this.metroGrid1.TabIndex = 0;
-            // 
-            // idProdutoDataGridViewTextBoxColumn
-            // 
-            this.idProdutoDataGridViewTextBoxColumn.DataPropertyName = "idProduto";
-            this.idProdutoDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.idProdutoDataGridViewTextBoxColumn.Name = "idProdutoDataGridViewTextBoxColumn";
-            this.idProdutoDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // valorDataGridViewTextBoxColumn
-            // 
-            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
-            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
-            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
-            // 
-            // idTipoProdutoDataGridViewTextBoxColumn
-            // 
-            this.idTipoProdutoDataGridViewTextBoxColumn.DataPropertyName = "idTipoProduto";
-            this.idTipoProdutoDataGridViewTextBoxColumn.HeaderText = "Tipo de Produto";
-            this.idTipoProdutoDataGridViewTextBoxColumn.Name = "idTipoProdutoDataGridViewTextBoxColumn";
-            this.idTipoProdutoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // estoqueDataGridViewTextBoxColumn
-            // 
-            this.estoqueDataGridViewTextBoxColumn.DataPropertyName = "estoque";
-            this.estoqueDataGridViewTextBoxColumn.HeaderText = "Quantidade";
-            this.estoqueDataGridViewTextBoxColumn.Name = "estoqueDataGridViewTextBoxColumn";
-            // 
-            // idFabricanteDataGridViewTextBoxColumn
-            // 
-            this.idFabricanteDataGridViewTextBoxColumn.DataPropertyName = "idFabricante";
-            this.idFabricanteDataGridViewTextBoxColumn.HeaderText = "Fabricante";
-            this.idFabricanteDataGridViewTextBoxColumn.Name = "idFabricanteDataGridViewTextBoxColumn";
-            this.idFabricanteDataGridViewTextBoxColumn.Width = 120;
             // 
             // produtoBindingSource
             // 
@@ -183,6 +148,58 @@
             this.btnAdicionar.UseSelectable = true;
             this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
+            // banco_pdsDataSet4
+            // 
+            this.banco_pdsDataSet4.DataSetName = "banco_pdsDataSet4";
+            this.banco_pdsDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pRODUTOBindingSource1
+            // 
+            this.pRODUTOBindingSource1.DataMember = "PRODUTO";
+            this.pRODUTOBindingSource1.DataSource = this.banco_pdsDataSet4;
+            // 
+            // pRODUTOTableAdapter
+            // 
+            this.pRODUTOTableAdapter.ClearBeforeFill = true;
+            // 
+            // id_produto
+            // 
+            this.id_produto.DataPropertyName = "id_produto";
+            this.id_produto.HeaderText = "Código";
+            this.id_produto.Name = "id_produto";
+            this.id_produto.ReadOnly = true;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // id_tipo_produto
+            // 
+            this.id_tipo_produto.DataPropertyName = "id_tipo_produto";
+            this.id_tipo_produto.HeaderText = "Tipo";
+            this.id_tipo_produto.Name = "id_tipo_produto";
+            // 
+            // id_fabricante
+            // 
+            this.id_fabricante.DataPropertyName = "id_fabricante";
+            this.id_fabricante.HeaderText = "Fabricante";
+            this.id_fabricante.Name = "id_fabricante";
+            // 
+            // valorDataGridViewTextBoxColumn
+            // 
+            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
+            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
+            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
+            // 
+            // estoqueDataGridViewTextBoxColumn
+            // 
+            this.estoqueDataGridViewTextBoxColumn.DataPropertyName = "estoque";
+            this.estoqueDataGridViewTextBoxColumn.HeaderText = "Quantidade";
+            this.estoqueDataGridViewTextBoxColumn.Name = "estoqueDataGridViewTextBoxColumn";
+            // 
             // FormListaProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,6 +217,8 @@
             this.Load += new System.EventHandler(this.FormListaProdutos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.banco_pdsDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUTOBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,16 +226,19 @@
         #endregion
 
         private MetroFramework.Controls.MetroGrid metroGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idProdutoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idTipoProdutoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estoqueDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idFabricanteDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource produtoBindingSource;
         private MetroFramework.Controls.MetroButton btnVoltar;
         private MetroFramework.Controls.MetroButton btnDeletar;
         private MetroFramework.Controls.MetroButton btnEditar;
         private MetroFramework.Controls.MetroButton btnAdicionar;
+        private banco_pdsDataSet4 banco_pdsDataSet4;
+        private System.Windows.Forms.BindingSource pRODUTOBindingSource1;
+        private banco_pdsDataSet4TableAdapters.PRODUTOTableAdapter pRODUTOTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_produto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_tipo_produto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_fabricante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estoqueDataGridViewTextBoxColumn;
     }
 }
