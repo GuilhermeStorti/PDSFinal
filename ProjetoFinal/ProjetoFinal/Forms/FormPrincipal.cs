@@ -41,6 +41,8 @@ namespace ProjetoFinal.Forms
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'banco_pdsDataSet9.PEDIDO' table. You can move, or remove it, as needed.
+            this.pEDIDOTableAdapter.Fill(this.banco_pdsDataSet9.PEDIDO);
 
         }
 

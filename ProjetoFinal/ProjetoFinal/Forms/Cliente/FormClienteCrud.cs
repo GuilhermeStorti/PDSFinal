@@ -38,36 +38,50 @@ namespace ProjetoFinal.Forms.Cliente
             {
                 ctx.ENDERECO.Add(endereco);
                 ctx.SaveChanges();
-                var enderecoFinal = ctx.ENDERECO.Where(en => en.logradouro == endereco.logradouro && en.numero == endereco.numero);
+                endereco = ctx.ENDERECO.Where(en => en.logradouro == endereco.logradouro && en.numero == endereco.numero).First<ENDERECO>();
             }
             else
             {
-                var enderecoFinal = ctx.ENDERECO.Where(en => en.logradouro == endereco.logradouro && en.numero == endereco.numero);
+                endereco = ctx.ENDERECO.Where(en => en.logradouro == endereco.logradouro && en.numero == endereco.numero).First<ENDERECO>();
             }
             cliente = new CLIENTE();
             cliente.nome = txtNome.Text;
-            cliente.telefone = txtMaskTelefone.Text;
+            cliente.telefone = txtTelefone.Text;
             cliente.email = txtEmail.Text;
-            cliente.cpf = txtMaskCPF.Text;
+            cliente.cpf = txtCPF.Text;
             cliente.id_endereco = endereco.id_endereco;
             ctx = new ContextBancoPds();
             ctx.CLIENTE.Add(cliente);
             ctx.SaveChanges();
+            DialogResult dialogResult = MessageBox.Show("Cliente Adicionado com sucesso! Deseja voltar a lista?", "Sucesso", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                limpar();
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limpar();
+        }
+
+        private void limpar()
         {
             txtBairro.Text = "";
             txtCep.Text = "";
             txtCidade.Text = "";
             txtComplemento.Text = "";
-            txtMaskCPF.Text = "";
+            txtCPF.Text = "";
             txtEmail.Text = "";
             txtEstado.Text = "";
             txtLogradouro.Text = "";
             txtNome.Text = "";
             txtNumero.Text = "";
-            txtMaskTelefone.Text = "";
+            txtTelefone.Text = "";
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

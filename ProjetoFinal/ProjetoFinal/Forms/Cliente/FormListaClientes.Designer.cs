@@ -38,15 +38,19 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.btnVoltar = new MetroFramework.Controls.MetroButton();
             this.btnAdicionar = new MetroFramework.Controls.MetroButton();
             this.btnEditar = new MetroFramework.Controls.MetroButton();
             this.btnDeletar = new MetroFramework.Controls.MetroButton();
+            this.banco_pdsDataSet5 = new ProjetoFinal.banco_pdsDataSet5();
+            this.cLIENTEBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.cLIENTETableAdapter = new ProjetoFinal.banco_pdsDataSet5TableAdapters.CLIENTETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.banco_pdsDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cLIENTEBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // clienteBindingSource
@@ -85,13 +89,6 @@
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.Width = 190;
             // 
-            // idClienteDataGridViewTextBoxColumn
-            // 
-            this.idClienteDataGridViewTextBoxColumn.DataPropertyName = "idCliente";
-            this.idClienteDataGridViewTextBoxColumn.HeaderText = "Codigo";
-            this.idClienteDataGridViewTextBoxColumn.Name = "idClienteDataGridViewTextBoxColumn";
-            this.idClienteDataGridViewTextBoxColumn.Width = 50;
-            // 
             // metroGrid1
             // 
             this.metroGrid1.AllowUserToResizeRows = false;
@@ -110,12 +107,11 @@
             this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.metroGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idClienteDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.cpfDataGridViewTextBoxColumn});
-            this.metroGrid1.DataSource = this.clienteBindingSource;
+            this.metroGrid1.DataSource = this.cLIENTEBindingSource2;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -183,6 +179,20 @@
             this.btnDeletar.UseSelectable = true;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
+            // banco_pdsDataSet5
+            // 
+            this.banco_pdsDataSet5.DataSetName = "banco_pdsDataSet5";
+            this.banco_pdsDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cLIENTEBindingSource2
+            // 
+            this.cLIENTEBindingSource2.DataMember = "CLIENTE";
+            this.cLIENTEBindingSource2.DataSource = this.banco_pdsDataSet5;
+            // 
+            // cLIENTETableAdapter
+            // 
+            this.cLIENTETableAdapter.ClearBeforeFill = true;
+            // 
             // FormListaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,9 +207,12 @@
             this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "FormListaClientes";
             this.Text = "MinhasVendas - Lista de Clientes";
+            this.Load += new System.EventHandler(this.FormListaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.banco_pdsDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cLIENTEBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,11 +225,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private MetroFramework.Controls.MetroButton btnVoltar;
         private MetroFramework.Controls.MetroButton btnAdicionar;
         private MetroFramework.Controls.MetroButton btnEditar;
         private MetroFramework.Controls.MetroButton btnDeletar;
+        private banco_pdsDataSet5 banco_pdsDataSet5;
+        private System.Windows.Forms.BindingSource cLIENTEBindingSource2;
+        private banco_pdsDataSet5TableAdapters.CLIENTETableAdapter cLIENTETableAdapter;
     }
 }

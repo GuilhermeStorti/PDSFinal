@@ -61,3 +61,6 @@ C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\
 C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Forms.Tipo.FormTipoCrud.resources
 C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.Properties.Resources.resources
 C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\obj\Debug\ProjetoFinal.csproj.GenerateResource.Cache
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\FlashControlV71.dll
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Guilherme\Desktop\ProjetoPdsGIT\PDSFinal\ProjetoFinal\ProjetoFinal\bin\Debug\stdole.dll

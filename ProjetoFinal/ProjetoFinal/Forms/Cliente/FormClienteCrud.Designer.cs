@@ -50,9 +50,9 @@
             this.btnSalvar = new MetroFramework.Controls.MetroButton();
             this.btnLimpar = new MetroFramework.Controls.MetroButton();
             this.btnVoltar = new MetroFramework.Controls.MetroButton();
-            this.txtMaskCPF = new System.Windows.Forms.MaskedTextBox();
-            this.txtMaskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtCep = new MetroFramework.Controls.MetroTextBox();
+            this.txtTelefone = new MetroFramework.Controls.MetroTextBox();
+            this.txtCPF = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // txtNome
@@ -416,32 +416,6 @@
             this.btnVoltar.UseSelectable = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // txtMaskCPF
-            // 
-            this.txtMaskCPF.BackColor = System.Drawing.Color.White;
-            this.txtMaskCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaskCPF.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtMaskCPF.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaskCPF.Location = new System.Drawing.Point(81, 275);
-            this.txtMaskCPF.Mask = "000,000,000-00";
-            this.txtMaskCPF.Name = "txtMaskCPF";
-            this.txtMaskCPF.Size = new System.Drawing.Size(200, 23);
-            this.txtMaskCPF.TabIndex = 21;
-            this.txtMaskCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtMaskTelefone
-            // 
-            this.txtMaskTelefone.BackColor = System.Drawing.Color.White;
-            this.txtMaskTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaskTelefone.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtMaskTelefone.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaskTelefone.Location = new System.Drawing.Point(81, 185);
-            this.txtMaskTelefone.Mask = "(00)90000-0000";
-            this.txtMaskTelefone.Name = "txtMaskTelefone";
-            this.txtMaskTelefone.Size = new System.Drawing.Size(200, 23);
-            this.txtMaskTelefone.TabIndex = 23;
-            this.txtMaskTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // txtCep
             // 
             // 
@@ -466,19 +440,77 @@
             this.txtCep.SelectionLength = 0;
             this.txtCep.SelectionStart = 0;
             this.txtCep.Size = new System.Drawing.Size(200, 23);
-            this.txtCep.TabIndex = 24;
+            this.txtCep.TabIndex = 10;
             this.txtCep.UseSelectable = true;
             this.txtCep.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCep.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtTelefone
+            // 
+            // 
+            // 
+            // 
+            this.txtTelefone.CustomButton.Image = null;
+            this.txtTelefone.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.txtTelefone.CustomButton.Name = "";
+            this.txtTelefone.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtTelefone.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtTelefone.CustomButton.TabIndex = 1;
+            this.txtTelefone.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtTelefone.CustomButton.UseSelectable = true;
+            this.txtTelefone.CustomButton.Visible = false;
+            this.txtTelefone.Lines = new string[0];
+            this.txtTelefone.Location = new System.Drawing.Point(81, 185);
+            this.txtTelefone.MaxLength = 9;
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.PasswordChar = '\0';
+            this.txtTelefone.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtTelefone.SelectedText = "";
+            this.txtTelefone.SelectionLength = 0;
+            this.txtTelefone.SelectionStart = 0;
+            this.txtTelefone.Size = new System.Drawing.Size(200, 23);
+            this.txtTelefone.TabIndex = 1;
+            this.txtTelefone.UseSelectable = true;
+            this.txtTelefone.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtTelefone.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txtCPF
+            // 
+            // 
+            // 
+            // 
+            this.txtCPF.CustomButton.Image = null;
+            this.txtCPF.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.txtCPF.CustomButton.Name = "";
+            this.txtCPF.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtCPF.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtCPF.CustomButton.TabIndex = 1;
+            this.txtCPF.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtCPF.CustomButton.UseSelectable = true;
+            this.txtCPF.CustomButton.Visible = false;
+            this.txtCPF.Lines = new string[0];
+            this.txtCPF.Location = new System.Drawing.Point(81, 275);
+            this.txtCPF.MaxLength = 11;
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.PasswordChar = '\0';
+            this.txtCPF.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtCPF.SelectedText = "";
+            this.txtCPF.SelectionLength = 0;
+            this.txtCPF.SelectionStart = 0;
+            this.txtCPF.Size = new System.Drawing.Size(200, 23);
+            this.txtCPF.TabIndex = 3;
+            this.txtCPF.UseSelectable = true;
+            this.txtCPF.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtCPF.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // FormClienteCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtCep);
-            this.Controls.Add(this.txtMaskTelefone);
-            this.Controls.Add(this.txtMaskCPF);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSalvar);
@@ -534,8 +566,8 @@
         private MetroFramework.Controls.MetroButton btnSalvar;
         private MetroFramework.Controls.MetroButton btnLimpar;
         private MetroFramework.Controls.MetroButton btnVoltar;
-        private System.Windows.Forms.MaskedTextBox txtMaskCPF;
-        private System.Windows.Forms.MaskedTextBox txtMaskTelefone;
         private MetroFramework.Controls.MetroTextBox txtCep;
+        private MetroFramework.Controls.MetroTextBox txtTelefone;
+        private MetroFramework.Controls.MetroTextBox txtCPF;
     }
 }

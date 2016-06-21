@@ -43,6 +43,7 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="MetroFramework">
       <HintPath>..\packages\MetroModernUI.1.3.5.0\lib\net45\MetroFramework.dll</HintPath>
     </Reference>
@@ -60,6 +61,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -139,6 +142,31 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>banco_pdsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="banco_pdsDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_pdsDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="banco_pdsDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_pdsDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="banco_pdsDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_pdsDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="banco_pdsDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_pdsDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="banco_pdsDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>banco_pdsDataSet9.xsd</DependentUpon>
     </Compile>
     <Compile Include="Forms\Cliente\FormClienteCrud.cs">
       <SubType>Form</SubType>
@@ -276,6 +304,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BancoPds.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="a.rpt" />
     <None Include="BancoPds\BancoPds.edmx.diagram">
       <DependentUpon>BancoPds.edmx</DependentUpon>
     </None>
@@ -334,6 +363,61 @@
     <None Include="banco_pdsDataSet4.xss">
       <DependentUpon>banco_pdsDataSet4.xsd</DependentUpon>
     </None>
+    <None Include="banco_pdsDataSet5.xsc">
+      <DependentUpon>banco_pdsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_pdsDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_pdsDataSet5.xss">
+      <DependentUpon>banco_pdsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet6.xsc">
+      <DependentUpon>banco_pdsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_pdsDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_pdsDataSet6.xss">
+      <DependentUpon>banco_pdsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet7.xsc">
+      <DependentUpon>banco_pdsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_pdsDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_pdsDataSet7.xss">
+      <DependentUpon>banco_pdsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet8.xsc">
+      <DependentUpon>banco_pdsDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_pdsDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_pdsDataSet8.xss">
+      <DependentUpon>banco_pdsDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet9.xsc">
+      <DependentUpon>banco_pdsDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="banco_pdsDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>banco_pdsDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="banco_pdsDataSet9.xss">
+      <DependentUpon>banco_pdsDataSet9.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProjetoFinal.Models.Cliente.datasource" />
     <None Include="Properties\DataSources\ProjetoFinal.Models.Fabricante.datasource" />
@@ -369,7 +453,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
