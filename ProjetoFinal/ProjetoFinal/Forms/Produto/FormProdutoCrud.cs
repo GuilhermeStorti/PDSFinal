@@ -49,7 +49,10 @@ namespace ProjetoFinal.Forms.Produto
             produto.id_fabricante = (long) comboFabricante.SelectedValue;
             produto.id_tipo_produto = (long) comboTipo.SelectedValue;
             String valor = txtValor.Text;
-            valor.Replace(".", ",");
+            if(valor.Contains(".") || valor.Contains(","))
+            {
+                valor.Replace(".", ",");
+            }            
             produto.valor = (valor == "" ? 0 : Convert.ToDouble(valor));
             ctx = new ContextBancoPds();
             ctx.PRODUTO.Add(produto);
